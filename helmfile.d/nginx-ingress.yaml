@@ -44,6 +44,16 @@ releases:
             hsts-max-age: "86400" # 24 hours, as a first gradual HSTS deployment - see INFRA-2998
           replicaCount: 2
           ingressClass: public-ingress
+          # This section refers to the creation of the IngressClass resource
+          # IngressClass resources are supported since k8s >= 1.18
+          ingressClassResource:
+            enabled: true
+            default: false
+
+            # Parameters is a link to a custom resource containing additional
+            # configuration for the controller. This is optional if the controller
+            # does not require extra parameters.
+            parameters: {}
           service:
             annotations:
               service.beta.kubernetes.io/azure-load-balancer-internal: false
@@ -93,6 +103,16 @@ releases:
             use-geoip2: "true"
           replicaCount: 2
           ingressClass: nginx
+          # This section refers to the creation of the IngressClass resource
+          # IngressClass resources are supported since k8s >= 1.18
+          ingressClassResource:
+            enabled: true
+            default: true
+
+            # Parameters is a link to a custom resource containing additional
+            # configuration for the controller. This is optional if the controller
+            # does not require extra parameters.
+            parameters: {}
           service:
             annotations:
               service.beta.kubernetes.io/azure-load-balancer-internal: true
