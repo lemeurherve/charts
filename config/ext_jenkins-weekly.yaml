@@ -18,6 +18,10 @@ networkPolicy:
     namespaceLabels:
       name: "jenkins-weekly"
 systemMessage: "Don't miss the <b>new Design Library</b> here: https://weekly.ci.jenkins.io/design-library"
+primaryView:
+    all:
+      description: "Take a look at the new Design Library: https://weekly.ci.jenkins.io/design-library"
+      name: "all"
 controller:
   image: jenkinsciinfra/jenkins-weekly
   tag: 0.52.0-2.342
