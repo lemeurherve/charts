@@ -271,3 +271,5 @@ releases:
     version: 0.1.2
     values:
       - "../config/nginx-proxy-azure.yaml"
+    secrets:
+      - "../secrets/config/github-comment-ops/secrets.yaml"
