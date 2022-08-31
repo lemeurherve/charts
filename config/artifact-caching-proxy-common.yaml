@@ -8,4 +8,5 @@ resources:
     memory: 256Mi
 
 persistence:
+  enabled: true
   size: 50
